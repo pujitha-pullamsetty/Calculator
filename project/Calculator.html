@@ -1,0 +1,57 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="Calculator.css">
+</head>
+<body>
+      <div class="Main">
+        <div class="box">
+            <form name="display">
+                <input id="screen" type="text">
+            </form>
+        <div class="button">
+            
+            <button onclick="clearvalue()">C</button>
+            <button onclick="back()">Del</button>
+            <button onclick="setvalue('%')">%</button>
+            <button onclick="setvalue('/')">/</button>
+            <button onclick="setvalue('7')">7</button>
+            <button onclick="setvalue('8')">8</button>
+            <button onclick="setvalue('9')">9</button>
+            <button onclick="setvalue('')"></button>
+            <button onclick="setvalue('4')">4</button>
+            <button onclick="setvalue('5')">5</button>
+            <button onclick="setvalue('6')">6</button>
+            <button onclick="setvalue('-')">-</button>
+            <button onclick="setvalue('1')">1</button>
+            <button onclick="setvalue('2')">2</button>
+            <button onclick="setvalue('3')">3</button>
+            <button onclick="setvalue('+')">+</button>     
+            <button onclick="setvalue('00')">00</button>   
+            <button onclick="setvalue('0')">0</button> 
+            <button onclick="setvalue('.')">.</button>        
+            <button onclick="answer()">=</button>   
+        </div>
+        </div>
+      </div>
+      <script>
+        function setvalue(num) {
+            document.display.screen.value += num;
+        }
+        function back() {
+            var val = document.display.screen.value ;
+            document.display.screen.value = val.slice(0,-1);
+        }
+        function clearvalue() {
+            document.display.screen.value = "";
+        }
+        function answer() {
+            var val = document.display.screen.value ;
+            document.display.screen.value = eval(val);
+        }
+      </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+*{
+    margin: 0px;
+    padding: 0px;  
+  box-sizing:border-box;
+    
+}
+body {
+    background-color: rgb(85, 82, 86);
+}
+.Main {
+    display:flex ;
+    height: 100vh;
+    width: 90vw;
+    align-items: center;
+    justify-content:center ;
+}
+.Main .box {
+    background-color: rgb(187, 111, 237);
+    height: 400px;
+    width: 300px;
+    border-radius: 3%;
+}
+.Main .box form input{
+  display: block;
+    width: 299px;
+    height: 55px;
+    text-align: end;
+    font-size: 30px;
+    font-weight: 700;
+    font-style: italic;
+    background-color: rgb(187, 111, 237);}
+.Main .box .button {
+    display: grid;
+    grid: auto auto auto auto / auto auto auto auto;
+    grid-template-columns: 50px 50px 50px 50px;
+    grid-template-rows: 50px 50px 50px 50px 50px;
+    row-gap: 20px;
+    column-gap: 25px;
+    justify-content: center;
+}
+.Main .box .button button:hover{
+    border-radius: 30%;
+}
